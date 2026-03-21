@@ -6,7 +6,6 @@ import random
 # ─── PAGE CONFIG ──────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="FossilFinder · Field Edition",
-    page_icon="🦴",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -858,7 +857,7 @@ st.markdown("""
 <div style="display:flex;justify-content:space-between;
      font-size:10px;color:#3a2e18;padding:10px 0;
      font-family:'Source Code Pro',monospace">
-  <span>🦴 FossilFinder v2.0 · Field Edition · Paleontology Explorer</span>
+  <span> FossilFinder · Field Edition · Paleontology Explorer</span>
   <span>15 groups · 3 eras · 541 Ma · Built for field geologists</span>
 </div>
 """, unsafe_allow_html=True)
