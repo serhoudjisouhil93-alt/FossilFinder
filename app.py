@@ -5,7 +5,7 @@ import random
 
 # ─── PAGE CONFIG ──────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="FossilFinder · Field Edition",
+    page_title="FossilFinder · Field Edition By SERHOUDJI",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -287,8 +287,8 @@ hr { border-color: #2a2015 !important; }
 </style>
 """, unsafe_allow_html=True)
 
-# ─── FOSSIL DATABASE ───────────────────────────────────────────────────────────
-# Images sourced from Wikimedia Commons (public domain / CC)
+# ─── FOSSIL DATABASE ──────────────────────────────────────────────────────────
+# Images: iNaturalist open-data S3 CDN — allows hotlinking, no CORS issues
 FOSSILS = [
     dict(
         name="Trilobita", common="Trilobite",
@@ -301,7 +301,7 @@ FOSSILS = [
         significance="Primary zone fossil for Cambrian–Ordovician. Rolled specimens indicate storm events or predator pressure.",
         locations=["Morocco (Anti-Atlas)", "USA (Utah, Ohio)", "Russia", "China", "Canada (Burgess Shale)", "Algeria (Saharan platform)"],
         coords=[(31.5, -7.0), (39.3, -111.0), (55.7, 37.6), (30.0, 110.0), (51.4, -116.5)],
-        image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Elrathia_kingii.jpg/320px-Elrathia_kingii.jpg",
+        image_url="https://inaturalist-open-data.s3.amazonaws.com/photos/202732/large.jpg",
         color="#8b6914",
     ),
     dict(
@@ -315,7 +315,7 @@ FOSSILS = [
         significance="Primary biozone fossil for Jurassic & Cretaceous. Suture complexity increases through time — useful for relative age dating in the field.",
         locations=["UK (Whitby, Dorset)", "Morocco (Erfoud)", "Madagascar", "France (Normandy)", "Germany", "Tunisia", "Algeria (Tlemcen)"],
         coords=[(54.4, -0.6), (31.4, -4.0), (-20.0, 47.0), (49.1, -0.4), (51.3, 10.4)],
-        image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Asteroceras_ammonite.jpg/320px-Asteroceras_ammonite.jpg",
+        image_url="https://inaturalist-open-data.s3.amazonaws.com/photos/9765041/large.jpg",
         color="#c8973a",
     ),
     dict(
@@ -329,7 +329,7 @@ FOSSILS = [
         significance="Primary zone fossil for Ordovician–Silurian globally. Black shale hosting = anoxic deep water paleoenvironment.",
         locations=["Wales (type locality)", "Scotland", "Canada (Quebec)", "China", "Australia", "Czech Republic"],
         coords=[(52.3, -3.7), (56.0, -4.2), (47.0, -71.0), (30.0, 110.0), (-25.0, 133.0)],
-        image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Didymograptus_murchisoni.jpg/320px-Didymograptus_murchisoni.jpg",
+        image_url="https://inaturalist-open-data.s3.amazonaws.com/photos/11828236/large.jpg",
         color="#4a3a1e",
     ),
     dict(
@@ -343,7 +343,7 @@ FOSSILS = [
         significance="Useful for Devonian biostratigraphy. Abundance indicates normal marine salinity. Distinct from bivalves — critical for paleoenvironment interpretation.",
         locations=["Germany (Rhine)", "USA (Devonian of New York)", "UK (Silurian)", "China", "Australia", "Algeria"],
         coords=[(50.9, 6.9), (42.9, -76.0), (52.3, -1.5), (30.0, 110.0), (-25.0, 133.0)],
-        image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Atrypa.JPG/320px-Atrypa.JPG",
+        image_url="https://inaturalist-open-data.s3.amazonaws.com/photos/1109128/large.jpg",
         color="#6b4e2a",
     ),
     dict(
@@ -357,7 +357,7 @@ FOSSILS = [
         significance="Primary Cenozoic biozone tool. Planktonic/benthic ratio indicates paleodepth. δ¹⁸O from shells = ancient temperature proxy.",
         locations=["Global oceans", "Egypt (Eocene)", "North Sea", "Caribbean", "Algeria (Saharan platform)", "Tunisia"],
         coords=[(29.9, 31.1), (56.0, 3.0), (15.0, -75.0), (36.8, 10.2), (28.0, 2.0)],
-        image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Foraminifera_bathysiphon.jpg/320px-Foraminifera_bathysiphon.jpg",
+        image_url="https://inaturalist-open-data.s3.amazonaws.com/photos/4083498/large.jpg",
         color="#a09060",
     ),
     dict(
@@ -371,7 +371,7 @@ FOSSILS = [
         significance="Micraster is a zone fossil for Cretaceous chalk. Irregular echinoids = infaunal life, indicates soft muddy seafloor.",
         locations=["UK (chalk downs)", "France (Normandy chalk)", "North Africa", "Egypt", "Israel", "Denmark"],
         coords=[(51.2, 0.5), (49.1, 0.3), (27.0, 20.0), (29.5, 31.2), (31.0, 35.0)],
-        image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Micraster_coranguinum_01.jpg/320px-Micraster_coranguinum_01.jpg",
+        image_url="https://inaturalist-open-data.s3.amazonaws.com/photos/10400298/large.jpg",
         color="#9a8060",
     ),
     dict(
@@ -385,7 +385,7 @@ FOSSILS = [
         significance="Useful index fossil for Jurassic–Cretaceous marine sequences. Guards indicate normal marine, moderate-energy conditions.",
         locations=["UK (Jurassic Coast)", "Germany (Solnhofen)", "Russia", "Poland", "Algeria (Tlemcen region)", "Tunisia"],
         coords=[(50.6, -2.4), (48.8, 11.0), (55.0, 40.0), (52.0, 20.0), (34.8, -1.3)],
-        image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Belemnite_guards.jpg/320px-Belemnite_guards.jpg",
+        image_url="https://inaturalist-open-data.s3.amazonaws.com/photos/22327381/large.jpg",
         color="#8a7050",
     ),
     dict(
@@ -399,7 +399,7 @@ FOSSILS = [
         significance="Crinoidal limestones = important petroleum reservoir rock (e.g. Mississippian plays, USA). Abundance indicates clear, well-oxygenated shallow seas.",
         locations=["USA (Indiana, Illinois)", "UK (Carboniferous)", "Germany", "Belgium", "Russia", "China"],
         coords=[(39.7, -86.1), (53.5, -1.5), (51.1, 10.4), (50.5, 4.4), (55.0, 40.0)],
-        image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Crinoidea.jpg/320px-Crinoidea.jpg",
+        image_url="https://inaturalist-open-data.s3.amazonaws.com/photos/3089/large.jpg",
         color="#7a6040",
     ),
     dict(
@@ -413,7 +413,7 @@ FOSSILS = [
         significance="Reef facies indicator. 4-fold septal symmetry distinguishes from modern corals. Extinction at Permian–Triassic boundary is a key global stratigraphic marker.",
         locations=["UK (Carboniferous)", "Belgium", "USA (Great Lakes)", "Germany", "Algeria", "China"],
         coords=[(53.5, -1.5), (50.5, 4.4), (43.0, -83.0), (51.1, 10.4), (28.0, 2.0)],
-        image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Lophophyllidium_proliferum.jpg/320px-Lophophyllidium_proliferum.jpg",
+        image_url="https://inaturalist-open-data.s3.amazonaws.com/photos/7615989/large.jpg",
         color="#7a5a3a",
     ),
     dict(
@@ -427,7 +427,7 @@ FOSSILS = [
         significance="Common marine fossil useful for Cenozoic age estimation. Black = Miocene or older; tan/brown = Pliocene; white/grey = Pleistocene–Recent.",
         locations=["Morocco (phosphate beds)", "USA (South Carolina, Maryland)", "Malta", "Belgium (Antwerp)", "Egypt", "Libya"],
         coords=[(32.0, -6.0), (33.8, -79.0), (35.9, 14.5), (51.2, 4.4), (27.0, 30.0)],
-        image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Megalodon_tooth_with_great_white_shark_teeth.jpg/320px-Megalodon_tooth_with_great_white_shark_teeth.jpg",
+        image_url="https://inaturalist-open-data.s3.amazonaws.com/photos/3927158/large.jpg",
         color="#8a9aaa",
     ),
     dict(
@@ -441,7 +441,7 @@ FOSSILS = [
         significance="Universal biozone tool across all environments — marine and non-marine. Essential for correlating coal measures, deltaic and lacustrine sequences where marine fossils are absent.",
         locations=["Global", "Coal basins worldwide", "North Sea (subsurface)", "Algeria (Sahara, subsurface)", "Nigeria (Niger Delta)"],
         coords=[(56.0, 3.0), (28.0, 2.0), (5.0, 6.0), (52.0, 5.0)],
-        image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Pollen_from_bee.jpg/320px-Pollen_from_bee.jpg",
+        image_url="https://inaturalist-open-data.s3.amazonaws.com/photos/60572954/large.jpg",
         color="#6a8a4a",
     ),
     dict(
@@ -455,7 +455,7 @@ FOSSILS = [
         significance="Biostratigraphic marker for Mesozoic continental deposits. Bones are often reworked — in situ specimens preserve original orientation and articulation.",
         locations=["Argentina (Patagonia)", "USA (Montana, Utah)", "China (Liaoning)", "Mongolia (Gobi)", "Tanzania (Tendaguru)", "Morocco (Kem Kem)"],
         coords=[(-45.0, -67.0), (47.0, -109.0), (41.0, 122.0), (44.0, 103.0), (-9.0, 35.0), (31.0, -5.0)],
-        image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Trex_smith.jpg/320px-Trex_smith.jpg",
+        image_url="https://inaturalist-open-data.s3.amazonaws.com/photos/71306/large.jpg",
         color="#6b8a3a",
     ),
     dict(
@@ -469,7 +469,7 @@ FOSSILS = [
         significance="Key marker for Eocene in Tethyan realm. Nummulitic limestones = petroleum reservoir rock in North Africa and Middle East. Visible without microscope — field-identifiable.",
         locations=["Algeria (Atlas)", "Egypt (Giza)", "Libya", "Tunisia", "France (Paris Basin)", "Spain", "India (Gujarat)", "Pakistan"],
         coords=[(36.0, 3.0), (29.9, 31.1), (27.0, 17.0), (34.0, 9.0), (48.8, 2.3), (40.4, -3.7)],
-        image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Nummulites_gizehensis.jpg/320px-Nummulites_gizehensis.jpg",
+        image_url="https://inaturalist-open-data.s3.amazonaws.com/photos/34566830/large.jpg",
         color="#b8a870",
     ),
     dict(
@@ -483,7 +483,7 @@ FOSSILS = [
         significance="Marker for Triassic–Jurassic marine deposits. Isolated vertebral discs are often misidentified as fish vertebrae — compare size and internal structure.",
         locations=["UK (Lyme Regis, Jurassic Coast)", "Germany (Holzmaden)", "Canada (British Columbia)", "Chile", "Nevada (USA)"],
         coords=[(50.7, -2.9), (48.4, 9.4), (54.0, -120.0), (-38.0, -71.0), (39.5, -116.0)],
-        image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Ichthyosaurus_communis.jpg/320px-Ichthyosaurus_communis.jpg",
+        image_url="https://inaturalist-open-data.s3.amazonaws.com/photos/34748484/large.jpg",
         color="#5a7a8a",
     ),
     dict(
@@ -497,7 +497,7 @@ FOSSILS = [
         significance="Primary biostratigraphy tool for Cenozoic continental deposits. Teeth enamel geochemistry provides paleoclimate data. Essential for correlating non-marine sequences.",
         locations=["USA (Badlands, South Dakota)", "China (Yunnan)", "Kenya (Turkana)", "France (Quercy)", "Algeria (Sahara, Gour Lazib)", "Pakistan (Siwaliks)"],
         coords=[(43.8, -102.3), (25.0, 102.0), (4.0, 36.0), (44.4, 1.5), (29.0, 2.0), (33.0, 72.0)],
-        image_url="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Mammuthus_primigenius_Gruß_aus_der_Eiszeit.jpg/320px-Mammuthus_primigenius_Gruß_aus_der_Eiszeit.jpg",
+        image_url="https://inaturalist-open-data.s3.amazonaws.com/photos/1527/large.jpg",
         color="#9a7050",
     ),
 ]
@@ -528,13 +528,22 @@ def fossil_card(f, show_image=True):
     tags_loc  = "".join(f'<span class="tag tag-loc">📍 {l}</span>' for l in f["locations"][:4])
     pres_color = {"Excellent":"#39c87a","Good":"#c8973a","Variable":"#e09030","Rare":"#e05c5c"}.get(f["preservation"],"#c8973a")
 
-    img_html = ""
-    if show_image:
-        img_html = f'<img class="fcard-img" src="{f["image_url"]}" alt="{f["common"]}" onerror="this.style.display=\'none\'">'
+    # Card top border
+    st.markdown(f'<div class="fcard">', unsafe_allow_html=True)
 
+    # Image — use st.image() which Streamlit handles natively and reliably
+    if show_image:
+        try:
+            st.image(f["image_url"], use_container_width=True,
+                     caption=f"{f['common']} · {f['era']}")
+        except Exception:
+            st.markdown(
+                f'<div class="fcard-img-placeholder">{f["emoji"]}</div>',
+                unsafe_allow_html=True
+            )
+
+    # Card body
     st.markdown(f"""
-    <div class="fcard">
-      {img_html}
       <div class="fcard-body">
         <div class="fcard-era">⏱ {f['period']} &nbsp;·&nbsp; {f['age_start']}–{f['age_end']} Ma &nbsp;·&nbsp; {f['era']}</div>
         <div class="fcard-name">{f['name']}</div>
@@ -857,7 +866,7 @@ st.markdown("""
 <div style="display:flex;justify-content:space-between;
      font-size:10px;color:#3a2e18;padding:10px 0;
      font-family:'Source Code Pro',monospace">
-  <span> FossilFinder · Field Edition · Paleontology Explorer</span>
+  <span> FossilFinder  · Field Edition · Paleontology Explorer - By SERHOUDJI</span>
   <span>15 groups · 3 eras · 541 Ma · Built for field geologists</span>
 </div>
 """, unsafe_allow_html=True)
