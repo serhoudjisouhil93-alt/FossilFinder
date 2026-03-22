@@ -78,7 +78,7 @@ No database, no backend, no cloud infrastructure — just Python, deployed for f
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/YOUR_USERNAME/fossilfinder.git
+git clone https://github.com/serhoudjisouhil93-alt/fossilfinder.git
 cd fossilfinder
 
 # 2. Install dependencies
